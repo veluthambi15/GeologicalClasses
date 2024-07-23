@@ -57,30 +57,6 @@ http://localhost:8080
 - Delete Section: DELETE /sections/{id}
 - List Sections: GET /sections
 
-### Geological Class API
-
-- Create Geological Class: POST /geological-classes
-- Get Geological Class by ID: GET /geological-classes/{id}
-- Update Geological Class: PUT /geological-classes/{id}
-- Delete Geological Class: DELETE /geological-classes/{id}
-- List Geological Classes: GET /geological-classes
-
-## Example Request Body for Creating a Section:
-
-### json
-{
-  "name": "Section 1"
-}
-
-#### Example Request Body for Creating a Geological Class:
-
-### json
-{
-  "name": "Geo Class 1",
-  "code": "GC1",
-  "sectionId": 1
-}
-
 ### Import and Export Endpoints
 
 - Import Data: POST /import
