@@ -60,14 +60,18 @@ http://localhost:8080
 ### Import and Export Endpoints
 
 - Import Data: POST /import
-  ##### Example Request Body:
 
-  {
-    "file": "<base64_encoded_file_content>"
-  }
+  ##### Example Request Body:
+  - Add the file into form-data under Body tab
+
+- Export Data: GET /import/{id}
+  Response: The response will be a imported status of the jobid.
 
 - Export Data: GET /export
   Response: The response will be a job id of exported data which stored in local memory.
+
+- Export Data: GET /export/{id}
+  Response: The response will be a exported status of the jobid.
 
 - Export Data: GET /export/{id}/file
   Response: The response will be a file (.xlsx) containing the exported data.
@@ -75,7 +79,6 @@ http://localhost:8080
 ## Design Choices
 - Database: PostgreSQL is used for reliable and scalable storage.
 - Entity Relationships: Section and GeologicalClass entities are connected with a one-to-many relationship.
-- Caching: Results of frequently accessed data can be cached for improved performance (consider integrating caching if needed).
 - Error Handling: Detailed error messages and validation are implemented to handle invalid inputs and database constraints.
 
 ## Technologies Used
