@@ -1,6 +1,6 @@
 # Geological Classes Application
 
-Overview
+## Overview
 This application manages geological classes and sections, providing CRUD operations for both entities. It utilizes a PostgreSQL database for storage and Spring Boot for backend services.
 
 Instructions to Run the Application
