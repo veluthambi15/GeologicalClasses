@@ -29,6 +29,16 @@ Update application.properties with your PostgreSQL database credentials.
 
 - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
+## Accessing the Endpoints in Postman:
+### Configure Security:
+
+By default, the application uses HTTP Basic authentication.
+
+- Username: user
+- Password: password
+
+Use these credentials to authenticate your requests in Postman.
+
 ## Run the Application:
 
 Open the project in your IDE and run it as a Spring Boot application.
@@ -54,6 +64,34 @@ http://localhost:8080
 - Update Geological Class: PUT /geological-classes/{id}
 - Delete Geological Class: DELETE /geological-classes/{id}
 - List Geological Classes: GET /geological-classes
+
+### Import and Export Endpoints
+
+#### Import Data: POST /import
+##### Example Request Body:
+
+{
+  "file": "<base64_encoded_file_content>"
+}
+
+#### Export Data: GET /export/{id}/file
+Response: The response will be a file (e.g., CSV or JSON) containing the exported data. The content type will be set accordingly (e.g., application/csv or application/json).
+
+##### Example Request Body for Creating a Section:
+
+{
+  "name": "Section 1"
+}
+Example Request Body for Creating a Geological Class:
+
+json
+Copy code
+{
+  "name": "Geo Class 1",
+  "code": "GC1",
+  "sectionId": 1
+}
+
 
 ## Example Request Body for Creating a Section:
 
