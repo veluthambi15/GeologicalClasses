@@ -39,7 +39,7 @@ The application will be accessible at:
 
 bash
 Copy code
-http://localhost:8080/api
+http://localhost:8080/
 API Endpoints:
 
 ## Section API
