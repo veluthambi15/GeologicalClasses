@@ -5,31 +5,29 @@ This application manages geological classes and sections, providing CRUD operati
 
 # Instructions to Run the Application
 ### Prerequisites
-Java JDK 11 or higher
-Maven
-PostgreSQL Database
+- Java JDK 11 or higher
+- Maven
+- PostgreSQL Database
 
 ## Steps
 ### Clone the Repository:
 
-bash
-Copy code
 git clone https://github.com/yourusername/GeologicalClasses.git
 
 ### Configure Database Connection:
 
 Update application.properties with your PostgreSQL database credentials.
 
-### properties
-Copy code
-spring.application.name=GeologicalClasses
+#### properties
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/geological_class
-spring.datasource.username=postgres
-spring.datasource.password=postgres
-spring.jpa.hibernate.ddl-auto=update
+- spring.application.name=GeologicalClasses
 
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+- spring.datasource.url=jdbc:postgresql://localhost:5432/geological_class
+- spring.datasource.username=postgres
+- spring.datasource.password=postgres
+- spring.jpa.hibernate.ddl-auto=update
+
+- spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
 ## Run the Application:
 
@@ -37,26 +35,25 @@ Open the project in your IDE and run it as a Spring Boot application.
 
 The application will be accessible at:
 
-bash
-Copy code
 http://localhost:8080
-API Endpoints:
 
-## Section API
 
-Create Section: POST /sections
-Get Section by ID: GET /sections/{id}
-Update Section: PUT /sections/{id}
-Delete Section: DELETE /sections/{id}
-List Sections: GET /sections
+##API Endpoints:
+### Section API
 
-## Geological Class API
+- Create Section: POST /sections
+- Get Section by ID: GET /sections/{id}
+- Update Section: PUT /sections/{id}
+- Delete Section: DELETE /sections/{id}
+- List Sections: GET /sections
 
-Create Geological Class: POST /geological-classes
-Get Geological Class by ID: GET /geological-classes/{id}
-Update Geological Class: PUT /geological-classes/{id}
-Delete Geological Class: DELETE /geological-classes/{id}
-List Geological Classes: GET /geological-classes
+### Geological Class API
+
+- Create Geological Class: POST /geological-classes
+- Get Geological Class by ID: GET /geological-classes/{id}
+- Update Geological Class: PUT /geological-classes/{id}
+- Delete Geological Class: DELETE /geological-classes/{id}
+- List Geological Classes: GET /geological-classes
 
 ## Example Request Body for Creating a Section:
 
