@@ -48,7 +48,7 @@ The application will be accessible at:
 http://localhost:8080
 
 
-##API Endpoints:
+## API Endpoints:
 ### Section API
 
 - Create Section: POST /sections
@@ -65,34 +65,6 @@ http://localhost:8080
 - Delete Geological Class: DELETE /geological-classes/{id}
 - List Geological Classes: GET /geological-classes
 
-### Import and Export Endpoints
-
-#### Import Data: POST /import
-##### Example Request Body:
-
-{
-  "file": "<base64_encoded_file_content>"
-}
-
-#### Export Data: GET /export/{id}/file
-Response: The response will be a file (e.g., CSV or JSON) containing the exported data. The content type will be set accordingly (e.g., application/csv or application/json).
-
-##### Example Request Body for Creating a Section:
-
-{
-  "name": "Section 1"
-}
-Example Request Body for Creating a Geological Class:
-
-json
-Copy code
-{
-  "name": "Geo Class 1",
-  "code": "GC1",
-  "sectionId": 1
-}
-
-
 ## Example Request Body for Creating a Section:
 
 ### json
@@ -108,6 +80,21 @@ Copy code
   "code": "GC1",
   "sectionId": 1
 }
+
+### Import and Export Endpoints
+
+- Import Data: POST /import
+  ##### Example Request Body:
+
+  {
+    "file": "<base64_encoded_file_content>"
+  }
+
+- Export Data: GET /export
+  Response: The response will be a job id of exported data which stored in local memory.
+
+- Export Data: GET /export/{id}/file
+  Response: The response will be a file (.xlsx) containing the exported data.
 
 ## Design Choices
 - Database: PostgreSQL is used for reliable and scalable storage.
