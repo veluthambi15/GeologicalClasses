@@ -58,14 +58,13 @@ http://localhost:8080
 ## Example Request Body for Creating a Section:
 
 ### json
-Copy code
 {
   "name": "Section 1"
 }
-Example Request Body for Creating a Geological Class:
+
+#### Example Request Body for Creating a Geological Class:
 
 ### json
-Copy code
 {
   "name": "Geo Class 1",
   "code": "GC1",
@@ -73,12 +72,12 @@ Copy code
 }
 
 ## Design Choices
-Database: PostgreSQL is used for reliable and scalable storage.
-Entity Relationships: Section and GeologicalClass entities are connected with a one-to-many relationship.
-Caching: Results of frequently accessed data can be cached for improved performance (consider integrating caching if needed).
-Error Handling: Detailed error messages and validation are implemented to handle invalid inputs and database constraints.
+- Database: PostgreSQL is used for reliable and scalable storage.
+- Entity Relationships: Section and GeologicalClass entities are connected with a one-to-many relationship.
+- Caching: Results of frequently accessed data can be cached for improved performance (consider integrating caching if needed).
+- Error Handling: Detailed error messages and validation are implemented to handle invalid inputs and database constraints.
 
 ## Technologies Used
-Java Spring Boot: For building the RESTful web service.
-PostgreSQL: For relational database management.
-Maven: For dependency management and build automation.
+- Java Spring Boot: For building the RESTful web service.
+- PostgreSQL: For relational database management.
+- Maven: For dependency management and build automation.
