@@ -39,7 +39,7 @@ The application will be accessible at:
 
 bash
 Copy code
-http://localhost:8080/
+http://localhost:8080
 API Endpoints:
 
 ## Section API
@@ -49,14 +49,16 @@ Get Section by ID: GET /sections/{id}
 Update Section: PUT /sections/{id}
 Delete Section: DELETE /sections/{id}
 List Sections: GET /sections
-Geological Class API
+
+## Geological Class API
 
 Create Geological Class: POST /geological-classes
 Get Geological Class by ID: GET /geological-classes/{id}
 Update Geological Class: PUT /geological-classes/{id}
 Delete Geological Class: DELETE /geological-classes/{id}
 List Geological Classes: GET /geological-classes
-Example Request Body for Creating a Section:
+
+## Example Request Body for Creating a Section:
 
 ### json
 Copy code
